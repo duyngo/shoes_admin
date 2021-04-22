@@ -1,0 +1,225 @@
+.layout-override{
+    padding : 0 !important;
+}
+
+.content-header{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+    background: #2d3446;
+}
+
+.isoContentMainLayout{
+    overflow-y: hidden !important;
+}
+
+.shoe-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.shoe-list-wrapper {
+    position: relative;
+    flex-grow : 1;
+    flex-shrink : 1;
+    border-right: 1px solid #cacaca;
+    max-width: 35%;
+    min-height: 100vh;
+}
+
+.shoe-list-body{
+    margin-top: 50px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.shoe-list-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.shoe-list-footer{
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+}
+
+.shoe-no-list{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shoe-item{
+    cursor: pointer
+}
+
+.shoe-item-body{
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.shoe-item-body img{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.shoe-item-title{
+    width: 90%;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.shoe-item-brand{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.shoe-item-category{
+    padding: 3px;
+    border-radius: 5px;
+    color: black;
+}
+
+
+.shoe-item-featured{
+    position: absolute;
+    right: 10px;
+    color: gold;
+    font-size: 20px;
+}
+
+.shoe-item-price{
+    margin-top: 15px;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.shoe-details-wrapper{
+    position: relative;
+    flex-grow: 2;
+    flex-shrink : 10;
+    min-height: 100vh;
+    max-width: 65%;
+}
+
+.shoe-details-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.shoe-details-body{
+    margin-top: 50px;
+    position: relative;
+    padding: 10px;
+}
+
+.sd-section-header{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 3px double #1b1b1b;
+}
+
+.sd-section{
+    margin-bottom: 25px;
+}
+
+.sd-label{
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+    color: #1b1b1b;
+}
+.sd-value{
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.sd-actions{
+    float: right;
+}
+
+.action-edit{
+    background: #4caf50 !important;
+    color: white;
+}
+
+.action-delete{
+    background: #ca453b !important;
+    color : white;
+}
+.action-edit:hover, .action-admin:hover, .action-delete:hover{
+    color: white;
+}
+
+.shoe-details-body{
+    padding: 10px;
+}
+
+.sd-name{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.sd-link{
+    font-size: 16px;
+}
+
+.sd-visitCTA{
+    font-size: 16px;
+    text-align : justify;
+    text-justify : inter-word;
+}
+
+.sd-image-list{
+    padding-left: 0;
+}
+
+.sd-image-list li{
+    display: inline;
+    margin-right: 10px;
+}
+
+.sd-image-list img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.no-selected-shoe{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

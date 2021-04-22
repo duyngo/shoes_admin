@@ -1,0 +1,190 @@
+.layout-override{
+    padding : 0 !important;
+}
+
+.content-header{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+    background: #2d3446;
+}
+
+.isoContentMainLayout{
+    overflow-y: hidden !important;
+}
+
+.brand-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.brand-list-wrapper {
+    position: relative;
+    flex-grow : 1;
+    flex-shrink : 1;
+    border-right: 1px solid #cacaca;
+    max-width: 35%;
+    min-height: 100vh;
+}
+
+.brand-list-body{
+    margin-top: 50px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.brand-list-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.brand-list-footer{
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+}
+
+.brand-no-list{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-item{
+    cursor: pointer
+}
+
+.brand-item-body{
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.brand-item-name{
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.brand-item-category{
+    padding: 3px;
+    border-radius: 5px;
+    color: black;
+}
+
+.brand-details-wrapper{
+    position: relative;
+    flex-grow: 2;
+    flex-shrink : 10;
+    min-height: 100vh;
+    max-width: 65%;
+}
+
+.brand-details-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.brand-details-body{
+    margin-top: 50px;
+    position: relative;
+    padding: 10px;
+}
+
+.bd-actions{
+    float: right;
+}
+
+.action-edit{
+    background: #4caf50 !important;
+    color: white;
+}
+
+.action-delete{
+    background: #ca453b !important;
+    color: white;
+}
+.action-edit:hover, .action-delete:hover{
+    color: white;
+}
+
+.brand-details-body{
+    padding: 10px;
+}
+
+.bd-name{
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.bd-dateAdded{
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bd-dateUpdated{
+    margin-top: 15px;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.bd-section-header{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 3px double #1b1b1b;
+}
+
+.bd-section{
+    margin-bottom: 25px;
+}
+.bd-label{
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+    color: #1b1b1b;
+}
+.bd-value{
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.bd-shoe-list{
+    padding-left: 0;
+}
+.related-shoe-img{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.no-selected-brand{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,184 @@
+.layout-override{
+    padding : 0 !important;
+}
+
+.content-header{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+    background: #2d3446;
+}
+
+.isoContentMainLayout{
+    overflow-y: hidden !important;
+}
+
+.promo-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.promo-list-wrapper {
+    position: relative;
+    flex-grow : 1;
+    flex-shrink : 1;
+    border-right: 1px solid #cacaca;
+    max-width: 35%;
+    min-height: 100vh;
+}
+
+.promo-list-body{
+    margin-top: 75px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.promo-list-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.promo-list-footer{
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+}
+
+.promo-no-list{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-item{
+    cursor: pointer
+}
+
+.promo-item-body{
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.promo-details-wrapper{
+    position: relative;
+    flex-grow: 2;
+    flex-shrink : 10;
+    min-height: 100vh;
+    max-width: 65%;
+}
+
+.promo-details-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.promo-details-body{
+    margin-top: 50px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.pd-section-header{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 3px double #1b1b1b;
+}
+
+.pd-section{
+    margin-bottom: 25px;
+}
+
+.pd-label{
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+    color: #1b1b1b;
+}
+.pd-value{
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.pd-actions{
+    float: right;
+}
+
+.action-update{
+    background: #4caf50 !important;
+    color: white;
+}
+
+.action-delete{
+    background: #ca453b !important;
+    color: white;
+}
+
+
+.promo-details-body{
+    padding: 10px;
+}
+
+
+
+.promo-item-code{
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.promo-item-title{
+    font-size: 13px;
+    font-weight: 300;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.promo-item-featured{
+    position: absolute;
+    right: 10px;
+    color: gold;
+    font-size: 20px;
+}
+
+.pd-image{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #e4e4e4;
+}
+.no-selected-promo{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.upper { text-transform: uppercase; }

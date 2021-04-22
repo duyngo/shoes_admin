@@ -1,0 +1,175 @@
+.layout-override{
+    padding : 0 !important;
+}
+
+.content-header{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 20px;
+    background: #2d3446;
+}
+
+.isoContentMainLayout{
+    overflow-y: hidden !important;
+}
+
+.banner-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-list-wrapper {
+    position: relative;
+    flex-grow : 1;
+    flex-shrink : 1;
+    border-right: 1px solid #cacaca;
+    max-width: 35%;
+    min-height: 100vh;
+}
+
+.banner-list-body{
+    margin-top: 75px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.banner-list-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.banner-list-footer{
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+}
+
+.banner-no-list{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-item{
+    cursor: pointer
+}
+
+.banner-item-body{
+    padding: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.banner-details-wrapper{
+    position: relative;
+    flex-grow: 2;
+    flex-shrink : 10;
+    min-height: 100vh;
+    max-width: 65%;
+}
+
+.banner-details-header{
+    height: 70px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.banner-details-body{
+    margin-top: 50px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.bd-section-header{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 3px double #1b1b1b;
+}
+
+.bd-section{
+    margin-bottom: 25px;
+}
+
+.bd-label{
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+    color: #1b1b1b;
+}
+.bd-value{
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+}
+
+.bd-actions{
+    float: right;
+}
+
+.action-update{
+    background: #4caf50 !important;
+    color: white;
+}
+
+.action-delete{
+    background: #ca453b !important;
+    color: white;
+}
+
+
+.banner-details-body{
+    padding: 10px;
+}
+
+.banner-item-title{
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+
+.banner-item-featured{
+    position: absolute;
+    right: 10px;
+    color: gold;
+    font-size: 20px;
+}
+
+.bd-image{
+    width: 90%;
+    height: 90%;
+    float: left;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #e4e4e4;
+}
+.no-selected-banner{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 137px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.upper { text-transform: uppercase; }
