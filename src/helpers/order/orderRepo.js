@@ -34,7 +34,7 @@ export const getOrders = async (page = 1, prev = null, nxt = null, searchData = 
             }
             
             if(prevRef == null && nextRef == null){
-                myQuery = myQuery.orderBy("dateSent","desc").limit(20);
+                myQuery = myQuery.orderBy("dateSent","desc");
             }
 
         }else{
@@ -69,8 +69,13 @@ export const getOrders = async (page = 1, prev = null, nxt = null, searchData = 
         let orders = [];
 
         for (const order of snapshots.docs) {
-            orders.push({...order.data()})
-            snapshotRefs.push(order)
+    
+            if(order.data().courierName !== undefined && order.data().courierName != '' 
+            && order.data().addressText !== undefined && order.data().addressText.indexOf('North Jakarta') > -1){
+                orders.push({...order.data()});
+                snapshotRefs.push(order);
+            }
+
         }
         
         if(orders.length>0){
@@ -110,7 +115,6 @@ export const searchOrders = async (keyword) => {
         const algoliaOrders = await algoliaSearchOrders(keyword)
 
         for(const order of algoliaOrders){
-      
             const {
                 addressText,
                 courierName,
@@ -132,7 +136,7 @@ export const searchOrders = async (keyword) => {
                 orderID
             } = order;
 
-            if(order.isDeleted===false){
+            if(order.isDeleted===false && order.courierName != '' && order.addressText.indexOf('North Jakarta') > -1){
                 orders.push({
                     addressText,
                     courierName,

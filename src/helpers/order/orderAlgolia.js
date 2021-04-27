@@ -9,14 +9,14 @@ const client = algoliasearch('LS6W1RH9KS','3fc8e0db416cafc9ccd7747ef2f50c3f',{
 })
 
 
-const ordersIndex = client.initIndex('test_ORDERS')
+const ordersIndex = client.initIndex('dev_ORDERS')
 
 export const algoliaSearchOrders = (search) => {
 
     return new Promise ( (resolve, reject) => {
         ordersIndex.search({
             query : search,
-            hitsPerPage : 20,
+
         }, (error, { hits } = {} ) => {
             if( error ){
                 console.log(`[ERROR] ${error}`)

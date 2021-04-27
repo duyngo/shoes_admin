@@ -167,6 +167,7 @@ export class Order extends Component {
             searchData = null;
           }
 
+      
           switch (action) {
             case "next":
               orderData = await getOrders(orderPage, null, nextRef, searchData);
@@ -178,6 +179,7 @@ export class Order extends Component {
               orderData = await getOrders(1, null, null, searchData);
               break;
           }
+        
 
           if (action === "next" && orderData.orders.length === 0) {
             orderData.orders = this.state.orders;
@@ -1489,12 +1491,12 @@ export class Order extends Component {
             }}
           >
             <div className="order-list-header">
-              <Button
+              {/* <Button
                 style={{ float: "left", zIndex: "10" }}
                 onClick={this.openOrderModal}
               >
                 <Icon type="plus" /> New Order
-              </Button>
+              </Button> */}
               <Button
                 style={{ float: "right", zIndex: "10" }}
                 onClick={this.refreshOrderList}
@@ -1593,7 +1595,7 @@ export class Order extends Component {
                   ""
                 ) : (
                   <div className="od-actions">
-                    <ButtonGroup>
+                    {/* <ButtonGroup>
                       <Button
                         onClick={this.updateOrder}
                         loading={isDeleting}
@@ -1624,7 +1626,7 @@ export class Order extends Component {
                           <Icon type="delete" />
                         </Button>
                       </Popconfirm>
-                    </ButtonGroup>
+                    </ButtonGroup> */}
                   </div>
                 )}
               </div>
