@@ -333,13 +333,13 @@ export const saveOrder = async (order, uploadArr ) => {
                 url = file.imageUrl;
             }
 
-            const uuidv1 = require('uuid/v1');
+            const uuidv1 = require('uuid');
             newFileList.push({
                 description : file.description,
                 imageUrl  : url,
                 serviceType : file.serviceType,
                 servicePrice : file.servicePrice,
-                uuid:  uuidv1()
+                uuid:  uuidv1.v1()
             })
         }
        
@@ -386,14 +386,14 @@ export const updateOrderStatus = async(order,uploadArr) => {
                 url = file.imageUrl;
             }
 
-            const uuidv1 = require('uuid/v1');
+            const uuidv1 = require('uuid');
     
             newFileList.push({
                 description : file.description,
                 imageUrl  : url,
                 serviceType : file.serviceType,
                 servicePrice : file.servicePrice,
-                uuid:  uuidv1()
+                uuid:  uuidv1.v1()
             })
         }
        

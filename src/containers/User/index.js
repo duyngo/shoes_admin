@@ -450,8 +450,8 @@ export class User extends Component{
                             isSending : true
                         },  async() => {
                                                   
-                            const uuidv1 = require('uuid/v1');
-                            let adminToken = uuidv1();
+                            const uuidv1 = require('uuid');
+                            let adminToken = uuidv1.v1();
                             
                             let url = FirebaseHelper.getFirebaseConfig().authDomain
             

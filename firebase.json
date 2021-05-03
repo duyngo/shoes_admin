@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site":"testpuliregroup",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -12,15 +13,5 @@
         "destination": "/index.html"
       }
     ]
-  },
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "storage": {
-    "rules": "storage.rules"
   }
 }
