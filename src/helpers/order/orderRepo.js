@@ -70,8 +70,7 @@ export const getOrders = async (page = 1, prev = null, nxt = null, searchData = 
 
         for (const order of snapshots.docs) {
     
-            if(order.data().courierName !== undefined && order.data().courierName != '' 
-            && order.data().addressText !== undefined && order.data().addressText.indexOf('North Jakarta') > -1){
+            if(order.data().addressText !== undefined && order.data().addressText.indexOf('North Jakarta') > -1){
                 orders.push({...order.data()});
                 snapshotRefs.push(order);
             }
@@ -136,7 +135,7 @@ export const searchOrders = async (keyword) => {
                 orderID
             } = order;
 
-            if(order.isDeleted===false && order.courierName != '' && order.addressText.indexOf('North Jakarta') > -1){
+            if(order.isDeleted===false && order.addressText.indexOf('North Jakarta') > -1){
                 orders.push({
                     addressText,
                     courierName,

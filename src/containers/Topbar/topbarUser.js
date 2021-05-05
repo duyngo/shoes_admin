@@ -5,6 +5,7 @@ import IntlMessages from "../../components/utility/intlMessages";
 import authAction from "../../redux/auth/actions";
 import TopbarDropdownWrapper from "./topbarDropdown.style";
 import { Icon } from "antd";
+import Button from '../../components/uielements/button';
 
 const { logout } = authAction;
 
@@ -24,6 +25,11 @@ class TopbarUser extends Component {
     this.setState({ visible: !this.state.visible });
   }
 
+  handleLogout = () => {
+    const { logout } = this.props;
+    logout();
+  }
+
   render() {
     const content = (
       <TopbarDropdownWrapper className="isoUserDropdown">
@@ -36,7 +42,7 @@ class TopbarUser extends Component {
         <a className="isoDropdownLink" href="# ">
           <IntlMessages id="topbar.help" />
         </a> */}
-        <a className="isoDropdownLink" onClick={logout} href="# ">
+        <a className="isoDropdownLink" onClick={this.handleLogout} href="javascript:void(0)">
           <IntlMessages id="topbar.logout" />
         </a>
       </TopbarDropdownWrapper>
