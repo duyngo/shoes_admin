@@ -126,7 +126,7 @@ export class Order extends Component {
     const script = document.createElement("script");
 
     script.src =
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyCdpvUgaSmIUmvxIOtOMuubZmVoaEQhwa4&libraries=places";
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyCdpvUgaSmIUmvxIOtOMuubZmVoaEQhwa4&libraries=places,geometry";
     script.async = true;
 
     document.body.appendChild(script);

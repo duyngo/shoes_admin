@@ -10,6 +10,41 @@ const ORDER_COLLECTION = 'orders';
 const PROMO_CODE_COLLECTION = 'promotionCodes';
 const ORDER_COUNT_COLLECTION = 'orderCounts';
 
+const polygonNorthJakartaCoords = [
+    { lat: -6.095510, lng: 106.711061 },
+    { lat: -6.088739, lng: 106.725743 },
+    { lat: -6.099587, lng: 106.737949 },
+    { lat: -6.100338, lng: 106.766228 },
+    { lat: -6.093271, lng: 106.794526 },
+    { lat: -6.114996, lng: 106.817296 },
+    { lat: -6.116566, lng: 106.827431 },
+    { lat: -6.097622, lng: 106.893158 },
+    { lat: -6.093334, lng: 106.963666 },
+    { lat: -6.105453, lng: 106.969107 },
+    { lat: -6.154143, lng: 106.970631 },
+    { lat: -6.162582, lng: 106.944731 },
+    { lat: -6.158471, lng: 106.934284 },
+    { lat: -6.182490, lng: 106.921660 },
+    { lat: -6.177513, lng: 106.896196 },
+    { lat: -6.163448, lng: 106.877696 },
+    { lat: -6.153278, lng: 106.860502 },
+    { lat: -6.153854, lng: 106.844491 },
+    { lat: -6.150360, lng: 106.841360 },
+    { lat: -6.144937, lng: 106.843729 },
+    { lat: -6.141775, lng: 106.838206 },
+    { lat: -6.140398, lng: 106.831130 },
+    { lat: -6.135380, lng: 106.830390 },
+    { lat: -6.136887, lng: 106.817026 },
+    { lat: -6.129814, lng: 106.814030 },
+    { lat: -6.133194, lng: 106.801632 },
+    { lat: -6.141346, lng: 106.800032 },
+    { lat: -6.144217, lng: 106.775091 },
+    { lat: -6.133455, lng: 106.749053 },
+    { lat: -6.119832, lng: 106.729830 },
+    { lat: -6.098598, lng: 106.713866 }
+];
+
+
 export const getOrders = async (page = 1, prev = null, nxt = null, searchData = null) => {
     
     try{
@@ -65,12 +100,14 @@ export const getOrders = async (page = 1, prev = null, nxt = null, searchData = 
 
         let snapshots = await myQuery.get();
         let snapshotRefs = [];
-        
-        let orders = [];
 
+        const NORTH_JAKARTA = new google.maps.Polygon({ paths: polygonNorthJakartaCoords });
+        let orders = [];
+        // console.log(snapshots.docs);
         for (const order of snapshots.docs) {
-    
-            if(order.data().addressText !== undefined && order.data().addressText.indexOf('North Jakarta') > -1){
+            // console.log(order.data());
+            let checkLatLng = new google.maps.LatLng(order.data().addressLocation._lat, order.data().addressLocation._long);
+            if(google.maps.geometry.poly.containsLocation(checkLatLng, NORTH_JAKARTA)){
                 orders.push({...order.data()});
                 snapshotRefs.push(order);
             }
@@ -111,7 +148,8 @@ export const searchOrders = async (keyword) => {
 
     try{
         let orders = [];
-        const algoliaOrders = await algoliaSearchOrders(keyword)
+        const algoliaOrders = await algoliaSearchOrders(keyword);
+        const NORTH_JAKARTA = new google.maps.Polygon({ paths: polygonNorthJakartaCoords });
 
         for(const order of algoliaOrders){
             const {
@@ -134,8 +172,8 @@ export const searchOrders = async (keyword) => {
                 customerPhoneNumber,
                 orderID
             } = order;
-
-            if(order.isDeleted===false && order.addressText.indexOf('North Jakarta') > -1){
+            let checkLatLng = new google.maps.LatLng(order.addressLocation._latitude, order.addressLocation._longitude);
+            if(order.isDeleted===false && google.maps.geometry.poly.containsLocation(checkLatLng, NORTH_JAKARTA)){
                 orders.push({
                     addressText,
                     courierName,
